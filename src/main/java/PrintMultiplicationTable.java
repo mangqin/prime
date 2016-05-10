@@ -7,6 +7,11 @@ public class PrintMultiplicationTable {
 			throw new InvalidParameterException();
 		}
 		int l = numbers.size();
+		// get largest number of the array
+		int max= numbers.get(l-1);
+		// get the max width to achieve alignment. 
+		// can use string length also. 
+		int width =(int)Math.floor(Math.log10(max * max)) + 2;
 		for (int j=-1; j<l;j++ ) {
 			if (j==-1) {
 				System.out.print ("          ");
